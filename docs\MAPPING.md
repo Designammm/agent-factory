@@ -1,0 +1,7 @@
+| `D:\Dollar Agent Project\New Start\Assets\Codes\Agent 01 - Inspector aka Scott\Agent_Factory_v0_7.zip` | `agents/inspector/ (archive extracted; ZIP excluded)` |
+| `D:\Dollar Agent Project\New Start\Assets\Codes\Agent 01 - Inspector aka Scott\Agent_Factory_v0_7.zip!agent_factory_v0_6/reports/openclaw-chile-e8f75f4883.md` | `Not included (generated reports excluded by rule)` |
+| `D:\Dollar Agent Project\New Start\Assets\Codes\Agent 01 - Inspector aka Scott\Agent_Factory_v0_7.zip!agent_factory_v0_6/reports/README.md` | `Not included (reports directory excluded by rule)` |
+| `D:\Dollar Agent Project\New Start\Assets\Codes\Agent 01 - Inspector aka Scott\Agent_Factory_v0_7.zip!agent_factory_v0_6/reports/moltjobs-marketplace-099208a85c.md` | `Not included (generated reports excluded by rule)` |
+| `D:\Dollar Agent Project\New Start\Assets\Codes\Agent 01 - Inspector aka Scott\Agent_Factory_v0_7.zip!agent_factory_v0_6/reports/ecomerate-intel-70b9ba9959.md` | `Not included (generated reports excluded by rule)` |
+| `D:\Dollar Agent Project\New Start\Assets\Codes\Agent 01 - Inspector aka Scott\Agent_Factory_v0_7.zip!agent_factory_v0_6/reports/moltbook-agent-finance-discussion-b839f10a58.md` | `Not included (generated reports excluded by rule)` |
+| `D:\Dollar Agent Project\New Start\Assets\Codes\Agent 01 - Inspector aka Scott\Agent_Factory_v0_7.zip!agent_factory_v0_6/reports/rushabdev-0dba6c75b6.md` | `Not included (generated reports excluded by rule)` |
