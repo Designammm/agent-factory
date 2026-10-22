@@ -1,0 +1,131 @@
+﻿# Agent Factory — Project Requirements (FA)
+
+منبع استخراج: Business Plan v1/v2/v3، بازخورد مدیریتی S000، گزارش و Test Prompt ممیزی v0.7، و محتوای Agent Factory v0.7.
+
+## 1\. هدف و معیار موفقیت
+
+* هدف سیستم کشف مهارت‌های اقتصادی قابل‌فروش، بازسازی مستقل آن‌ها با AI، پیدا کردن کار واقعی، انجام کار، دریافت و ثبت درآمد و ایجاد چرخه تکرارپذیر است.
+* معیار اصلی پیشرفت «درآمد واقعی» است؛ تعداد ایجنت، حجم کد یا تعداد قابلیت‌ها معیار موفقیت نیست.
+* MVP باید بتواند چرخه کشف → شواهد → انتخاب → بازسازی/انجام کار → پرداخت → ثبت نتیجه را عملی کند.
+* هدف اولیه v3: 3 تا 10 دلار در هفته، برای چهار هفته متوالی؛ اولین پرداخت هدف‌گذاری‌شده در روز 21 است. این‌ها هدف‌اند، نه تضمین.
+
+## 2\. مدل عملیاتی
+
+* هر ادعا فقط سیگنال/بوی اولیه است، نه مدرک.
+* شواهد باید از هم تفکیک و قابل ردیابی باشند.
+* اول تقاضا و امکان دریافت پول، سپس اتوماسیون گسترده.
+* ورودی زیاد فقط همراه با فیلتر ارزان و قابل‌اعتماد ارزش دارد.
+* در هر لحظه فقط یک Sprint فعال باشد.
+* فناوری و ابزارها هفتگی بازبینی شوند و در طول هفته پایدار بمانند.
+
+## 3\. پایپ‌لاین و شواهد
+
+* زنجیره اصلی فعلی: DISCOVER → RAW EVIDENCE → IDENTITY RESOLUTION → AGENT ↔ EVIDENCE → OBSERVATION / CLAIM → PAYMENT EXTRACTION → PAYMENT STATE → EARNING + CAPABILITY + RISK → CANDIDATE.
+* سطوح شواهد: E0 ادعا/متن؛ E1 پیشنهاد عمومی دارای قیمت/کار مشخص؛ E2 اثر عمومی پرداخت با تأیید مستقل؛ E3 فروش و پرداخت واقعی به کیف پول پروژه.
+* E0 نباید به‌تنهایی مبنای تصمیم درآمدی باشد.
+* پرداخت متنی با پرداخت تأییدشده یکسان نیست.
+* transaction hash تا زمان وجود verifier مستقل «unverified» بماند.
+
+## 4\. Inspector / Agent 06
+
+* بازرس فعلی تنها ایجنت موجود در v3 است.
+* وظیفه: کشف، استخراج، تحلیل و درجه‌بندی شواهد.
+* بازرس read-only است.
+* بازرس نباید کلید خصوصی، seed phrase یا ابزار پرداخت داشته باشد.
+* بازرس نباید پیشنهاد، هزینه یا پرداخت را بدون تأیید صریح مالک اجرا کند.
+
+## 5\. منابع و داده
+
+* منابع discovery فعلی شامل Moltbook و MoltJobs هستند؛ منابع دیگر باید با آداپتور مستقل اضافه شوند.
+* هر منبع باید قبل از ساخت adapter از نظر API و Terms of Service بررسی شود.
+* خطای یک source نباید کل pipeline را از کار بیندازد.
+* pagination، retry، timeout، redirect، پاسخ خالی/ناقص و malformed response باید مدیریت شوند.
+* متن خام منابع «داده ناامن» محسوب شود و نباید بتواند ابزار یا کلیدهای ایجنت را کنترل کند.
+
+## 6\. تشخیص ادعا و پرداخت
+
+* parser باید بین ادعای completed، negated، intent، prediction/possibility، third-party و quoted text تمایز بگذارد.
+* ادعای شخص ثالث یا متن نقل‌قول‌شده نباید به‌عنوان درآمد agent نام‌گذاری‌شده ثبت شود.
+* zero/negative amounts نباید payment record بسازند.
+* amount باید دقیق و بدون از دست دادن هزارگان/اعشار استخراج شود.
+* transaction hash باید normalize و از نظر شکل بررسی شود، اما شکل معتبر به‌تنهایی اثبات پرداخت نیست.
+* یک source of truth برای payment state، amount parsing، money vocabulary و claim classification لازم است.
+* ingestion باید idempotent باشد و اجرای تکراری رکوردهای متناقض یا duplicate نسازد.
+
+## 7\. Identity و Evidence
+
+* author معتبر باید identity پایدار تولید کند.
+* author خالی/whitespace/unknown و URL-only نباید agent واقعی بسازد.
+* identity باید Unicode-normalized و از zero-width characters پاک شود.
+* evidence باید به agent صحیح متصل شود.
+* evidence با author نامشخص حفظ شود، ولی نباید صرفاً از URL path به agent تبدیل شود.
+
+## 8\. Capability / Work Detection
+
+* تشخیص مهارت باید morphology را پوشش دهد، مانند design/designer/designing، write/writer/writing، copywriting/copywriter، research/researchers و automation.
+* vocabulary و variant map باید یک منبع مشترک داشته باشند.
+* capability باید بر اساس evidence مستقل تجمیع شود و سقف داشته باشد.
+
+## 9\. Risk و Gate
+
+* risk، hype، money، work و automation باید vocabulary و variantهای قابل پیکربندی داشته باشند.
+* risk نباید به‌علت duplicate vocabulary دوبار شمرده شود.
+* secret solicitation مانند seed phrase، secret key، wallet credentials و API key باید hard-block مستقل از score داشته باشد.
+* hype باید به‌صورت مستقل روی risk اثر بگذارد.
+* candidate gate باید دقیقاً مطابق configuration عمل کند.
+* مرزهای threshold باید تست شوند.
+
+## 10\. Database و Persistence
+
+* evidence، observation، payment و candidate باید روابط و uniqueness روشن داشته باشند.
+* payment ledger نباید با evidence ناسازگار شود.
+* transaction hash تکراری یا با case متفاوت نباید ledger را inflate کند.
+* external\_id و author باید در idempotency/deduplication لحاظ شوند.
+* migration باید versioned و transaction-safe باشد و در هر connect cleanup destructive انجام ندهد.
+* legacy databases باید migration path مشخص داشته باشند.
+
+## 11\. Security و اخلاق
+
+* جاسوسی، دسترسی به داده خصوصی، bypass کردن login یا نقض Terms of Service ممنوع است.
+* impersonation، fake review/testimonial، فریب و آسیب به دیگران ممنوع است.
+* secretها نباید در داده/لاگ ذخیره یا از کاربر مطالبه شوند.
+* arbitrary shell execution، SQL injection، path traversal، SSRF، unsafe deserialization و credential leakage باید بررسی شوند.
+* Agent Factory در این مرحله نباید autonomous spending، wallet signing یا withdrawal داشته باشد.
+* هر مورد اخلاقی/حقوقی مبهم به Gate G2 و مالک پروژه ارجاع شود و تصمیم ثبت شود.
+* G0 باید قبل از اولین پیشنهاد پولی، مالکیت/محل کیف پول و الزامات قانونی/تحریمی را روشن کند.
+
+## 12\. Payment Layer
+
+* کیف پول فقط public-address based و read-only باشد.
+* شبکه و token قبل از مرحله پرداخت مشخص شوند.
+* تأیید پرداخت باید read-only و بر پایه دو منبع مستقل باشد: tx ID → contract address رسمی → recipient → amount/price → confirmation → chain/hash/block/time.
+* مسیر تأمین هزینه ابزارها باید قانونی و جدا از مسیر دریافت درآمد تعریف شود.
+* سقف هزینه، kill switch و ثبت هزینه/زمان/درآمد/شکست الزامی است.
+
+## 13\. Testing و Audit
+
+* تست adversarial بخشی از معماری است، نه فعالیت جانبی.
+* تست باید malformed input، missing values، duplicate/repeated input، boundary values، contradictory evidence، third-party attribution، quoted text، @handle، fake tx hash و adversarial combinations را پوشش دهد.
+* test suite نباید تنها منبع اعتماد باشد؛ تست مستقل و audit لازم است.
+* نتایج باید با برچسب‌های EXEC/CODE/INFER/UNVER/NOT TESTED/ENV تفکیک شوند.
+* هیچ audit نباید پروژه را بدون اجازه تغییر دهد.
+* regression suite باید یافته‌های نسخه‌های قبلی را حفظ کند.
+
+## 14\. معماری پیشنهادی برای ادامه
+
+* Claim parser clause-based به‌عنوان source of truth.
+* Vocabulary module مرکزی.
+* Migration module versioned.
+* Test isolation با temporary DB/reports.
+* Payment verifier مستقل و فقط پس از تثبیت parser.
+* تا زمانی که موارد بحرانی parser، identity، dedupe، risk و migration حل نشده‌اند، وارد on-chain verification و Trust Wallet routing نشوید.
+
+## 15\. تصمیم‌های باز
+
+* لینک/آدرس دقیق منابع بعدی مانند Neblis.
+* اولین skill candidate.
+* سقف هزینه هفتگی.
+* شبکه و token پرداخت.
+* مالک G2.
+* سیاست توقف در صورت نبود پرداخت برای مدت تعیین‌شده.
+
