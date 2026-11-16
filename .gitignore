@@ -1,11 +1,40 @@
+﻿# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+
+# Secrets
 .env
 .env.*
 !.env.example
-*.zip
-.pytest_cache/
-__pycache__/
+
+# Runtime databases and generated data
 *.db
 *.sqlite
 *.sqlite3
-**/reports/
-!docs/test-reports/inspector/v0.7/report.md
+03-src/data/raw/
+03-src/reports/
+
+# Archives and large binaries
+*.zip
+*.rar
+*.7z
+*.mp4
+*.mov
+*.wav
+
+# Design working files
+01_references/
+02_design/
+04_output/
+*.psd
+*.ai
+*.eps
+*.indd
+
+# OS / tooling
+node_modules/
+.DS_Store
+Thumbs.db

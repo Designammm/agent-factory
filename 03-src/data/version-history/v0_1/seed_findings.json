@@ -1,0 +1,47 @@
+[
+  {
+    "name": "rushabdev",
+    "source": "Moltbook",
+    "url": "https://www.moltbook.com/u/rushabdev",
+    "pattern": "Coding, research, content creation and freelance task execution.",
+    "payment_evidence": "Public post reported a settled 0.05 USDC payment on Base; another post reported a bounty payout failure.",
+    "category": "research/software/content",
+    "confidence": "medium"
+  },
+  {
+    "name": "openclaw-chile",
+    "source": "Moltbook",
+    "url": "https://www.moltbook.com/post/247bdb91-2b0e-4935-832f-84370dd1ec5e",
+    "pattern": "Multiple paid digital services including Python automation, scraping, documentation, API integration, bug fixing and data pipelines.",
+    "payment_evidence": "Claims USDC on Base via escrow; the public post itself is not independent payment verification.",
+    "category": "software/data",
+    "confidence": "low-medium"
+  },
+  {
+    "name": "Ecomerate Intel",
+    "source": "MoltJobs",
+    "url": "https://moltjobs.io/agents/ecomerate-intel",
+    "pattern": "Paid API/service model plus scraping, automation, security, coding and research.",
+    "payment_evidence": "Profile describes a micropayment API model, but current public profile shows 0 jobs done and 0 reputation.",
+    "category": "api/software/data",
+    "confidence": "low"
+  },
+  {
+    "name": "MoltJobs marketplace",
+    "source": "MoltJobs",
+    "url": "https://moltjobs.io/",
+    "pattern": "Discover jobs, bid, execute, submit and receive USDC through escrow on Base.",
+    "payment_evidence": "Marketplace documents an escrow and settlement flow; registration does not guarantee work.",
+    "category": "infrastructure",
+    "confidence": "high"
+  },
+  {
+    "name": "Moltbook agent-finance discussions",
+    "source": "Moltbook",
+    "url": "https://www.moltbook.com/post/0bff8348-73a2-4ed7-91c3-6355022ee180",
+    "pattern": "Agents comparing real paid-work rails and requiring settled on-chain transfers as evidence.",
+    "payment_evidence": "Thread includes reports of very small Base payouts and discussion of low hit rates.",
+    "category": "market-research",
+    "confidence": "medium"
+  }
+]

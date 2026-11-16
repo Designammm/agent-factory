@@ -1,0 +1,175 @@
+{
+  "sources": {
+    "moltbook_feed": "https://www.moltbook.com/api/v1/feed?sort=new&limit=50",
+    "moltjobs_open_jobs": "https://api.moltjobs.io/v1/jobs?status=OPEN&limit=100"
+  },
+  "money": [
+    "usdc",
+    "usd",
+    "near",
+    "paid",
+    "payout",
+    "earned",
+    "revenue",
+    "income",
+    "payment",
+    "escrow",
+    "bounty",
+    "settled",
+    "released",
+    "received"
+  ],
+  "work": [
+    "research",
+    "data",
+    "extraction",
+    "scraping",
+    "documentation",
+    "content",
+    "lead",
+    "report",
+    "coding",
+    "testing",
+    "python",
+    "javascript",
+    "write",
+    "design"
+  ],
+  "automation": [
+    "autonomous",
+    "automation",
+    "cron",
+    "heartbeat",
+    "mcp",
+    "api"
+  ],
+  "risk": [
+    "trading",
+    "gambling",
+    "fake review",
+    "testimonial",
+    "impersonate",
+    "impersonated",
+    "impersonation",
+    "credential",
+    "password",
+    "private key"
+  ],
+  "thresholds": {
+    "earning_min": 4,
+    "capability_min": 3,
+    "risk_gate_enabled": true,
+    "candidate_max_risk": 6
+  },
+  "risk_hype": [
+    "guaranteed",
+    "instant",
+    "easy money",
+    "passive income",
+    "100%",
+    "get rich",
+    "free money"
+  ],
+  "work_variants": {
+    "research": [
+      "research",
+      "researcher",
+      "researchers",
+      "researching",
+      "researched"
+    ],
+    "design": [
+      "design",
+      "designer",
+      "designers",
+      "designing",
+      "designed"
+    ],
+    "write": [
+      "write",
+      "writer",
+      "writers",
+      "writing",
+      "wrote",
+      "written"
+    ],
+    "data": [
+      "data",
+      "dataset",
+      "datasets"
+    ],
+    "extraction": [
+      "extract",
+      "extraction",
+      "extracting",
+      "extractor"
+    ],
+    "scraping": [
+      "scrape",
+      "scraping",
+      "scraper",
+      "scrapers"
+    ],
+    "documentation": [
+      "document",
+      "documentation",
+      "documenting"
+    ],
+    "content": [
+      "content",
+      "contents"
+    ],
+    "lead": [
+      "lead",
+      "leads",
+      "lead-gen",
+      "leadgen"
+    ],
+    "report": [
+      "report",
+      "reports",
+      "reporting"
+    ],
+    "coding": [
+      "code",
+      "coding",
+      "coder",
+      "coders",
+      "software",
+      "programming",
+      "programmer"
+    ],
+    "testing": [
+      "test",
+      "testing",
+      "tester",
+      "testers",
+      "tested"
+    ],
+    "automation": [
+      "automation",
+      "automate",
+      "automated",
+      "automating"
+    ],
+    "python": [
+      "python"
+    ],
+    "javascript": [
+      "javascript"
+    ],
+    "api": [
+      "api"
+    ]
+  },
+  "risk_variants": {
+    "impersonate": [
+      "impersonate",
+      "impersonated",
+      "impersonation",
+      "impersonating",
+      "impersonator"
+    ]
+  },
+  "version": "0.6.0"
+}

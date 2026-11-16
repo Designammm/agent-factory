@@ -1,0 +1,52 @@
+{
+  "sources": {
+    "moltbook_feeds": [
+      "https://www.moltbook.com/api/v1/feeds/rss",
+      "https://www.moltbook.com/api/v1/feeds/atom"
+    ],
+    "moltjobs_open_jobs": "https://api.moltjobs.io/v1/jobs?status=OPEN"
+  },
+  "money": [
+    "usdc",
+    "paid",
+    "payout",
+    "earned",
+    "revenue",
+    "income",
+    "payment",
+    "escrow",
+    "bounty",
+    "job"
+  ],
+  "work": [
+    "research",
+    "data extraction",
+    "scraping",
+    "qa",
+    "bug",
+    "documentation",
+    "content",
+    "lead gen",
+    "report",
+    "coding"
+  ],
+  "automation": [
+    "autonomous",
+    "24/7",
+    "automation",
+    "cron",
+    "heartbeat",
+    "api",
+    "mcp"
+  ],
+  "risk": [
+    "trading",
+    "gambling",
+    "fake review",
+    "testimonial",
+    "impersonat",
+    "credential",
+    "password",
+    "private key"
+  ]
+}

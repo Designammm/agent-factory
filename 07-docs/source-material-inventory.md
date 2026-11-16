@@ -10,24 +10,27 @@ The bilingual project requirements are maintained separately in:
 
 ## Mapping
 
-| Source | Destination |
+| Source material | Canonical destination |
 |---|---|
-| Agent_Factory_Business_Plan_v1.docx | 07-docs/specifications/ |
-| Agent_Factory_Business_Plan_v2.md | 07-docs/specifications/ |
-| Agent_Factory_Business_Plan_v3.md | 07-docs/specifications/ |
-| AF-CC-S000 Feedback - 13 Oct 2026.pdf | 01-research/user-notes/ |
-| Agent_Factory_v0_7_Report.md | 06-reports/evals/ |
-| Agent_Factory_v0_7_Test_Prompt.txt | 05-tests/ |
-| v0.6 source package | 03-src/agent/, 03-src/tools/, 03-src/config/ |
-| v0.6 seed data | 04-assets/data/ |
-| v0.6 tests | 05-tests/ |
-| v0.6 reports | 06-reports/evals/ |
-| v0.6 documentation | 07-docs/specifications/ |
-| v0.6 .gitignore | 99-archive/v0_6/ |
+| Business plans v1, v2 and v3 | `07-docs/specifications/` |
+| AF-CC-S000 feedback PDF | `01-research/user-notes/` |
+| v0.7 evaluation report | `06-reports/evals/` |
+| Active v0.7 Python package | `03-src/agent_factory/` |
+| Active runtime config and dependencies | `03-src/config.json`, `03-src/requirements.txt` |
+| Active seed/runtime data | `03-src/data/` |
+| Active test suite and v0.7 test prompt | `05-tests/` |
+| Historical source and release config v0.1-v0.6 | `03-src/versions/<version>/` |
+| Active v0.7 source | `03-src/agent_factory/` (one canonical copy; ZIP retained in archive) |
+| Historical tests | `05-tests/version-history/<version>/` |
+| Historical reports | `06-reports/reports/version-history/<version>/` |
+| Historical seed data | `03-src/data/version-history/<version>/` |
+| Historical README, checkpoint and changelog files | `07-docs/specifications/version-history/<version>/` |
+| Original release ZIP files | `99-archive/` |
+| Non-identical export variants | `99-archive/extracted-differences/` |
 
 ## Preservation
 
-`ALL FILES` is retained as the untouched source drop. The organized project contains copies, not destructive moves.
+Original release ZIP files are retained unchanged in `99-archive/`. Extracted historical files are filed by type and version. The active v0.7 package remains separate from historical snapshots.
 
 ## Language separation
 

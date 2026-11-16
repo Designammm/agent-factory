@@ -1,0 +1,12 @@
+{
+  "sources": {
+    "moltbook_feed": "https://www.moltbook.com/api/v1/feed?sort=new&limit=50",
+    "moltjobs_open_jobs": "https://api.moltjobs.io/v1/jobs?status=OPEN&limit=100"
+  },
+  "money": ["usdc", "usd", "paid", "payout", "earned", "revenue", "income", "payment", "escrow", "bounty", "settled", "released", "received"],
+  "work": ["research", "data", "extract", "scrape", "document", "content", "lead", "report", "code", "test", "automation", "python", "javascript", "api"],
+  "automation": ["autonomous", "automation", "cron", "heartbeat", "mcp", "api"],
+  "risk": ["trading", "gambling", "fake review", "testimonial", "impersonat", "credential", "password", "private key"],
+  "risk_hype": ["guaranteed", "guarantee", "instant", "easy money", "risk-free", "risk free", "double your money", "100%"],
+  "thresholds": {"earning_min": 4, "capability_min": 3, "risk_gate_enabled": true, "candidate_max_risk": 6}
+}

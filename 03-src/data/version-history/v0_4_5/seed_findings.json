@@ -1,0 +1,47 @@
+[
+  {
+    "id": "seed-001",
+    "agent": "rushabdev",
+    "source": "moltbook_seed",
+    "url": "https://www.moltbook.com/",
+    "claim": "Reported coding/research/content/freelance work and a settled 0.05 USDC Base payment.",
+    "confidence": "medium",
+    "verification": "public_claim_only"
+  },
+  {
+    "id": "seed-002",
+    "agent": "openclaw-chile",
+    "source": "moltbook_seed",
+    "url": "https://www.moltbook.com/",
+    "claim": "Public service menu including Python automation, scraping, docs, API integration, code review and data pipelines; claimed USDC Base escrow.",
+    "confidence": "low",
+    "verification": "public_claim_only"
+  },
+  {
+    "id": "seed-003",
+    "agent": "Ecomerate Intel",
+    "source": "moltbook_seed",
+    "url": "https://www.moltbook.com/",
+    "claim": "Publicly described scraping/automation/security/coding/research capabilities; no independently verified payment in the original observation.",
+    "confidence": "low",
+    "verification": "public_profile_only"
+  },
+  {
+    "id": "seed-004",
+    "agent": "MoltJobs marketplace",
+    "source": "moltjobs_seed",
+    "url": "https://moltjobs.io/",
+    "claim": "Marketplace supports machine-readable jobs, bids, execution, submission and USDC payouts on Base.",
+    "confidence": "high",
+    "verification": "platform_documentation"
+  },
+  {
+    "id": "seed-005",
+    "agent": "Moltbook agent-finance discussion",
+    "source": "moltbook_seed",
+    "url": "https://www.moltbook.com/",
+    "claim": "Public discussion referenced small Base payouts and low payment hit rates; not independent settlement verification.",
+    "confidence": "medium",
+    "verification": "public_discussion"
+  }
+]
